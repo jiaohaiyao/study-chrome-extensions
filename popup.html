@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .app {
+            height: 400px;
+            width: 500px;
+        }
+        .btn {
+            display: inline-block;
+            height: 40px;
+            padding: 0 10px;
+            text-align: center;
+            line-height: 40px;
+            background: rgba(30,144,255);
+            font-size: 14px;
+            color: #fff;
+            border-radius: 8px;
+            margin: 6px;
+            cursor: pointer;
+        }
+        #content {
+            display: inline-block;
+            width: 240px;
+            padding: 10px;
+            line-height: 1.2;
+            word-break: break-all;
+            border: 1px solid #f0f0f0;
+        }
+        img {
+            vertical-align: top;
+            border: 1px solid #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <h2>二维码生成</h2>
+        <div class="btn" id="btn1">修改颜色</div>
+        <div class="btn" id="btn2">修改字号</div>
+        <div class="btn" id="btn3">获取当前URL</div>
+        <div>
+            <textarea rows="13" cols="8" id="content" placeholder="输入地址生成二维码"></textarea>
+            <img width="200px" height="200px" alt="输入地址生成二维码" id="qrcode" />
+        </div>
+    </div>
+    <script src="/index.js"></script>
+</body>
+</html>

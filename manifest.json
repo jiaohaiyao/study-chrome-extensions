@@ -1,0 +1,24 @@
+{
+  "version": "0.1.0",
+  "name": "qrcode",
+  "manifest_version": 2,
+  "description": "二维码生成",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"],
+        "run_at": "document_start",
+        "all_frames": true 
+    }
+  ],
+  "permissions": [ "contextMenus", "notifications", "management", "tabs", "webRequest", "storage", "http://*/*", "https://*/*" ],
+  "content_security_policy": "script-src 'self'; connect-src http://localhost:3000 https://localhost:3000 http://i.data.api.lianjia.com/v2/meta/vrheatmap http://api.data.lianjia.com/Api/apiPlat/verifySign; style-src * 'unsafe-inline' 'self' blob:; img-src 'self' https://api.pwmqr.com/qrcode/create; "
+}
