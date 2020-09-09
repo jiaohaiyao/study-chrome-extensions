@@ -8,7 +8,9 @@ chrome.runtime.onMessage.addListener(
       console.log('来自扩展程序', request.msg);
       // TODO sth
         if (request.msg === '修改背景') {
-            document.querySelectorAll('input')[0].style.background = 'red'
+            var random = Math.floor(Math.random() * 6 + 1);
+            
+            document.body.style.background = 'url(' + chrome.extension.getURL('/img/bg' + random + '.jpg') + ') center / cover fixed'
             // 发送消息
             sendResponse({ msg: '完成修改'});
         }

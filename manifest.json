@@ -11,6 +11,17 @@
     "48": "img/icon-48.png",
     "128": "img/icon-128.png"
   },
+  "web_accessible_resources": [
+    "img/bg1.jpg",
+    "img/bg2.jpg",
+    "img/bg3.jpg",
+    "img/bg4.jpg",
+    "img/bg5.jpg",
+    "img/bg6.jpg"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
   "content_scripts": [
     {
         "matches": ["<all_urls>"],
@@ -20,5 +31,5 @@
     }
   ],
   "permissions": [ "contextMenus", "notifications", "management", "tabs", "webRequest", "storage", "http://*/*", "https://*/*" ],
-  "content_security_policy": "script-src 'self'; connect-src http://localhost:3000 https://localhost:3000 http://i.data.api.lianjia.com/v2/meta/vrheatmap http://api.data.lianjia.com/Api/apiPlat/verifySign; style-src * 'unsafe-inline' 'self' blob:; img-src 'self' https://api.pwmqr.com/qrcode/create; "
+  "content_security_policy": "script-src 'self'; connect-src http://localhost:3000 https://localhost:3000 http://i.data.api.lianjia.com/v2/meta/vrheatmap http://api.data.lianjia.com/Api/apiPlat/verifySign; style-src * 'unsafe-inline' 'self' blob:; img-src 'self' https://api.pwmqr.com/qrcode/create; object-src 'self';"
 }
